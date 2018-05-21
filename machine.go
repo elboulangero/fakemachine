@@ -353,7 +353,7 @@ func (m *Machine) setupscratch() error {
 	if err != nil {
 		return err
 	}
-	mkfs := exec.Command("mkfs.ext4", "-q", tmpfile.Name())
+	mkfs := exec.Command("/sbin/mkfs.ext4", "-q", tmpfile.Name())
 	err = mkfs.Run()
 
 	return err
